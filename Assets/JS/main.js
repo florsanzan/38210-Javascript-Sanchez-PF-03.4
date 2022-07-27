@@ -49,16 +49,11 @@ sessionStorage.carrito == undefined ?
 
 for (let i = 0; i < libros.length; i++) {
   botones[i].onclick =  () => {
-    comprar(libros[i]);
+    carrito.agregarItem(libros[i]);
   };
 }
 
 //FUNCIONES
-function comprar(producto) {
-  console.log(carrito);
-  carrito.agregarItem(producto);
-}
-
 function precioFinal(precioProducto) {
   return (totalCarrito = precioProducto + precioProducto * valorIVA + envio);
 }
