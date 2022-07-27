@@ -12,7 +12,7 @@ class Carrito {
       }
       this.productos[libros.id].cant++;
     } else {
-      return console.log("No hay mas stock");
+      return console.log("No hay mas en stock");
     }
     actualizar();
   }

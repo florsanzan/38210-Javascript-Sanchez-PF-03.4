@@ -31,7 +31,7 @@ for (let libro of libros) {
   clonado.children[0].innerText = libro.nombre;
   clonado.children[1].innerText = libro.autor;
   clonado.children[2].innerText = "$" + libro.precio;
-  clonado.children[3].innerText = "En stock: "+ libro.stock;
+
 
   claseCajas.appendChild(clonado);
 }
