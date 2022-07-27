@@ -14,9 +14,6 @@ let valorIVA = 0.21;
 let totalCarrito;
 let carritoSS;
 
-//CLASES
-Libro;
-Carrito;
 
 //Añado los productos
 const libros = [];
