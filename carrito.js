@@ -5,27 +5,26 @@ class Carrito {
     this.productos = [];
   }
 
-    agregarItem (libros) {
-      if (libros.hayStock(libros)) {
-        if (this.productos[libros.id] == undefined) {
-          this.productos[libros.id] = libros;
-        }
-        this.productos[libros.id].cant++;
-      } else {
-        return console.log("No hay stock");
+  agregarItem(libros) {
+    if (libros.hayStock(libros)) {
+      if (this.productos[libros.id] == undefined) {
+        this.productos[libros.id] = libros;
       }
-      actualizar();
-    };
+      this.productos[libros.id].cant++;
+    } else {
+      return console.log("No hay mas stock");
+    }
+    actualizar();
+  }
 
-    precioProducto() {
-      let totalP = 0;
-      for (let producto of this.productos) {
-        if (producto != undefined) {
-          totalP += producto.precio * producto.cant;
-        }
+  precioProducto() {
+    let totalP = 0;
+    for (let producto of this.productos) {
+      if (producto != undefined) {
+        totalP += producto.precio * producto.cant;
       }
-      this.total = totalP;
-      return totalP;
-    };
-
+    }
+    this.total = totalP;
+    return totalP;
+  }
 }

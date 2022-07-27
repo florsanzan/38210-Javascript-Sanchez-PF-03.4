@@ -12,13 +12,5 @@ class Libro {
       this.stock--;
       return true;
     }
-    if (libros.stock == 0) {
-      console.log("No hay mas en stock");
-      return false;
-    }
-    if (libros.stock < this.cant) {
-      console.log("La cantidad ingresada excede el stock");
-      return false;
-    }
   }
 }
